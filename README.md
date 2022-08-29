@@ -1,7 +1,18 @@
+# Como utilizar
+
+Para construir os containers e subir as aplicações, execute o seguinte comando no terminal estando na raiz desse projeto:
+
+```bash
+  docker-compose --env-file ./library_back/.env up
+```
+
+---
+
 # Trabalho-Individual-2022-1
+
 Trabalho individual de GCES de 2022/1
 
-Os conhecimentos de *Gestão de Configuração de Software* são fundamentais no ciclo de vida de um produto de software. As técnicas para a gestão vão desde o controle de versão, automação de build e de configuração de ambiente, testes automatizados, isolamento do ambiente até o deploy do sistema. Todo este ciclo nos dias de hoje são integrados em um pipeline de DevOps com as etapas de Integração Contínua (CI) e Deploy Contínuo (CD) implementadas e automatizada.
+Os conhecimentos de _Gestão de Configuração de Software_ são fundamentais no ciclo de vida de um produto de software. As técnicas para a gestão vão desde o controle de versão, automação de build e de configuração de ambiente, testes automatizados, isolamento do ambiente até o deploy do sistema. Todo este ciclo nos dias de hoje são integrados em um pipeline de DevOps com as etapas de Integração Contínua (CI) e Deploy Contínuo (CD) implementadas e automatizada.
 
 Para exercitar estes conhecimentos, neste trabalho, você deverá aplicar os conceitos estudados ao longo da disciplina no produto de software contido neste repositório.
 
@@ -53,9 +64,10 @@ Para a realização desta etapa, a aplicação já deverá ter seu ambiente comp
 
 Deverá ser utilizada uma ferramenta de Integração Contínua para garantir o build, os testes e os deploy para o [Docker Hub](https://hub.docker.com) dos serviços principais.
 
-Esta etapa do trabalho poderá ser realizada utilizado os ambientes de CI do [GitLab-CI](https://docs.gitlab.com/ee/ci/). ou [Github Actions](https://github.com/features/actions).  
+Esta etapa do trabalho poderá ser realizada utilizado os ambientes de CI do [GitLab-CI](https://docs.gitlab.com/ee/ci/). ou [Github Actions](https://github.com/features/actions).
 
 Requisitos da configuração da Integração Contínua (Gitlab ou Github) incluem:
+
 - Build
 - Test
 - Lint
@@ -68,23 +80,23 @@ A etapa final do trabalho deverá ser realizada à partir do deploy automático 
 
 A avaliação do trabalho será feita à partir da correta implementação de cada etapa 1 a 6. A avaliação será feita de maneira **quantitativa** (se foi realizado a implementação + documentação), e **qualitativa** (como foi implementado, entendimento dos conceitos na prática, complexidade da solução). Para isso, faça os **commits atômicos, bem documentados, completos** a fim de facilitar o entendimento e avaliação do seu trabalho. Lembrando o trabalho é individual.
 
-**Observações**: 
+**Observações**:
+
 1. A data final de entrega do trabalho é o dia 04/09/2022;
 2. O trabalho deve ser desenvolvido em um **repositório PESSOAL e PRIVADO** que deverá ser tornado público somente após a data de entrega do trabalho (no dia 05/09/2022);
 3. Cada etapa do trabalho deverá ser entregue em commits progressivos (pendendo ser mais de um commit por etapa);
 4. Os **commits devem estar espaçados em dias ao longo do desenvolvimento do trabalho**. Commits feitos todos juntos na data de entrega não serão descontados da nota final.
 
-| Item | Peso |
-|---|---|
-| 1. Containerização do Banco                      | 1.0 |
-| 2. Containerização da Aplicação + Banco          | 1.5 |
-| 3. Containerização da Aplicação + Banco + Front  | 1.5 |
-| 4. Containerização da Aplicação + Banco + Front + Nginx  | 1.5 |
-| 5. Integração Contínua (Build, Test, Lint)       | 3.0 |
-| 6. Deploy Contínuo                               | 1.5 |
+| Item                                                    | Peso |
+| ------------------------------------------------------- | ---- |
+| 1. Containerização do Banco                             | 1.0  |
+| 2. Containerização da Aplicação + Banco                 | 1.5  |
+| 3. Containerização da Aplicação + Banco + Front         | 1.5  |
+| 4. Containerização da Aplicação + Banco + Front + Nginx | 1.5  |
+| 5. Integração Contínua (Build, Test, Lint)              | 3.0  |
+| 6. Deploy Contínuo                                      | 1.5  |
 
-
-##  Exemplo de Trabalhos Anteriores
+## Exemplo de Trabalhos Anteriores
 
 Alguns trabalhos de trabalhos anteriores:
 
