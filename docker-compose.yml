@@ -1,16 +1,36 @@
-version: "3.7"
+version: "3.9"
 
 services:
   database:
     image: postgres
+    container_name: postgres
+    restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
     ports:
-      - "${POSTGRES_PORT}:5432"
+      - "5432:5432"
     volumes:
-      - ./pgdata:/var/lib/postgresql/data
+      - ./data/db:/var/lib/postgresql/data
+
+  api:
+    build: ./library_back/
+    container_name: django
+    volumes:
+      - ./library_back:/usr/src/app
+    ports:
+      - "8000:8000"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+    command: >
+      sh -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    depends_on:
+      - database
 
 volumes:
   pgdata:
