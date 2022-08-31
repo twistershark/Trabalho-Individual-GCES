@@ -1,5 +1,16 @@
 # Como utilizar
 
+Copie o arquivo `.env-sample` da pasta `library_back` e cole renomeando-o para `.env`.
+Depois, será necessário definir o conteúdo das variáveis ambiente. Deixe assim:
+```js
+  POSTGRES_DB=library_db
+  POSTGRES_USER=postgres
+  POSTGRES_PASSWORD=password
+  POSTGRES_HOST=database
+  POSTGRES_PORT=5432
+```
+
+
 Para construir os containers e subir as aplicações, execute o seguinte comando no terminal estando na raiz desse projeto:
 
 ```bash
