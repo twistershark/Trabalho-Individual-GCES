@@ -40,7 +40,7 @@ services:
     build: ./library_front/
     container_name: react
     volumes:
-      - ./library_front:/usr/src/app
+      - react_build:/app/build
     ports:
       - "3000:3000"
     depends_on:
@@ -48,8 +48,21 @@ services:
     networks:
       - net
 
+  nginx:
+    build: ./nginx/   
+    ports:
+      - 80:8080
+    volumes:
+      - react_build:/usr/share/nginx/html
+    restart: always
+    depends_on:
+      - web
+    networks:
+      - net
+
 volumes:
   pgdata:
+  react_build:
 
 networks:
   net:
