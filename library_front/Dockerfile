@@ -1,4 +1,4 @@
-FROM node:16-alpine 
+FROM node:16-alpine
 
 WORKDIR /app
 
@@ -11,7 +11,3 @@ RUN npm ci
 COPY . .
 
 RUN npm run build
-
-EXPOSE 3000
-
-CMD [ "npx", "serve", "build" ]
