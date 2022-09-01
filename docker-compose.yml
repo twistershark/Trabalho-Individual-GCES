@@ -13,6 +13,8 @@ services:
       - "5432:5432"
     volumes:
       - ./data/db:/var/lib/postgresql/data
+    networks:
+      - net
 
   api:
     build: ./library_back/
@@ -31,6 +33,8 @@ services:
       sh -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     depends_on:
       - database
+    networks:
+      - net
   
   web:
     build: ./library_front/
@@ -41,6 +45,12 @@ services:
       - "3000:3000"
     depends_on:
       - api
+    networks:
+      - net
 
 volumes:
   pgdata:
+
+networks:
+  net:
+    driver: bridge
