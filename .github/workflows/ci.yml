@@ -21,9 +21,9 @@ jobs:
       - name: Build app
         run: docker compose -f docker-compose.cicd.yml up -d
       - name: Linting
-        run: docker exec -it react npm run lint
+        run: docker exec -t react npm run lint
       - name: Testing
-        run: docker exec -it react npm test
+        run: docker exec -t react npm test
 
   backend:
     runs-on: ubuntu-latest
