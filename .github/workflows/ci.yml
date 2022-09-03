@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build app
-      - run: docker compose up 
+        run: docker compose up 
 
   lint:
     runs-on: ubuntu-latest
