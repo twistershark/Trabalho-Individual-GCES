@@ -22,20 +22,11 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build app
         run: docker compose -f docker-compose.cicd.yml up -d
-      - name: Linting
+      - name: Frontend - Linting
         run: docker exec -t react npm run lint
-
-  backend:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Execute Docker Compose
-        run: docker compose -f docker-compose.cicd.yml up -d
-      - name: Make Migrations
+      - name: Backend - Make Migrations
         run: docker exec -t django python manage.py makemigrations
-      - name: Run Migrations
+      - name: Backend - Run Migrations
         run: docker exec -t django python manage.py migrate
-      - name: Testing
+      - name: Backend - Testing
         run: docker exec -t django python manage.py test
-
-
