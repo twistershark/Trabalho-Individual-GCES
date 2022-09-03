@@ -23,7 +23,7 @@ jobs:
       - name: Linting
         run: docker exec -t react npm run lint
       - name: Testing
-        run: docker exec -t react npm test
+        run: docker exec -t react "CI=true npm test"
 
   backend:
     runs-on: ubuntu-latest
