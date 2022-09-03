@@ -27,7 +27,7 @@ jobs:
 
   backend:
     runs-on: ubuntu-latest
-    needs: [build]
+    needs: [web]
     steps:
       - uses: actions/checkout@v3
       - name: Run lint
