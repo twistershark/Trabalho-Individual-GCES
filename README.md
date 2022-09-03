@@ -11,7 +11,6 @@ Depois, será necessário definir o conteúdo das variáveis ambiente. Deixe ass
 ```
 
 
-
 Para construir os containers e subir as aplicações, execute o seguinte comando no terminal estando na raiz desse projeto:
 
 ```bash
