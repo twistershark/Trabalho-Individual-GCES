@@ -30,6 +30,6 @@ jobs:
       - name: Execute Docker Compose
         run: docker compose -f docker-compose.cicd.yml up -d
       - name: Testing
-        run: docker exec -t django "python manage.py test"
+        run: docker exec -t django python manage.py test
 
 
