@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run lint
-        run: docker-compose run react -c "npm run lint"
+        run: docker compose -f docker-compose.cicd.yml run web -c "npm run lint"
 
   test:
     runs-on: ubuntu-latest
