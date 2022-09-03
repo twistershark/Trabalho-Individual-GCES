@@ -17,9 +17,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Build app
-    - run: docker compose up 
+      - uses: actions/checkout@v3
+      - name: Build app
+      - run: docker compose up 
 
   lint:
     runs-on: ubuntu-latest
