@@ -17,6 +17,7 @@ function Perfil() {
 
   const listBooks = books.map((book) => (
     <Book
+      key={book.id}
       title={book.title}
       author={book.author}
       release_year={book.release_year}
