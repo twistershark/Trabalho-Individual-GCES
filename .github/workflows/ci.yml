@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run lint
-        run: docker-compose run app react -c "npm run lint"
+        run: docker-compose run react -c "npm run lint"
 
   test:
     runs-on: ubuntu-latest
@@ -35,4 +35,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run tests
-        run: docker-compose run app react -c "npm run test"
+        run: docker-compose run react -c "npm run test"
