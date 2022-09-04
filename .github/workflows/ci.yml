@@ -56,4 +56,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: twistershark17/gces:latest, twistershark17/gces:{{ github.run_number }}
+          tags: twistershark17/gces:latest
