@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build app
-        run: docker compose -f docker-compose.cicd.yml up -d
+        run: docker compose up -d
         
       - name: Frontend - Linting
         run: docker exec -t react npm run lint
