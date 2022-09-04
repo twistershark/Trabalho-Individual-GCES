@@ -44,7 +44,7 @@ services:
   web:
     build: 
       context: app
-      dockerfile:./library_front/Dockerfile
+      dockerfile: ./library_front/Dockerfile
     container_name: react
     volumes:
       - react_build:/app/build
