@@ -19,7 +19,7 @@ services:
       - net
 
   api:
-    build: ./library_back/Dockerfile
+    build: ./library_back/dockerfile
     container_name: django
     volumes:
       - ./library_back:/usr/src/app
@@ -40,7 +40,7 @@ services:
       - net
   
   web:
-    build: ./library_front/Dockerfile
+    build: ./library_front/dockerfile
     container_name: react
     volumes:
       - react_build:/app/build
