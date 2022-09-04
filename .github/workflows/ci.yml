@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build app
-        run: docker compose up -d app
+        run: docker compose up -d api web
         
       - name: Frontend - Linting
         run: docker exec -t react npm run lint
